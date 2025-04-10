@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Speed</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/key-removebg-preview.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/c4702f7f09.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="list1">
+        <img src="./assets/key-removebg-preview.png" />
+        <ul>
+          <li>
+            <i
+              style="font-size: 25px; color: #a8a8a8"
+              class="fa-solid fa-crown"
+            ></i>
+          </li>
+          <li>
+            <i
+              style="font-size: 25px; color: #a8a8a8"
+              class="fa-solid fa-stopwatch"
+            ></i>
+          </li>
+        </ul>
+      </div>
+      <div class="list2">
+        <div>
+          <span
+            ><i style="font-size: 15px" class="fa-solid fa-at"></i>
+            punctuation</span
+          ><span
+            ><i style="font-size: 15px" class="fa-solid fa-hashtag"></i>
+            numbers</span
+          >
+          <span><i class="fa-solid fa-quote-left"></i> quote</span>
+        </div>
+        <div>
+          <span> 15</span>
+          <span> 30</span>
+          <span> 60</span>
+        </div>
+      </div>
+      <div>
+        <div class="profile" style="color: #a8a8a8; cursor: pointer">
+          <span>
+            <i
+              style="color: #a8a8a8; margin-right: 10px"
+              class="fa-regular fa-user"
+            ></i>
+            Shruti_03</span
+          >
+          <div class="profile-menu">
+            <span
+              ><i style="font-size: 15px" class="fa-solid fa-chart-line"></i>
+              User stats</span
+            >
+            <span
+              ><i
+                style="font-size: 15px"
+                class="fa-solid fa-right-to-bracket"
+              ></i>
+              Sign out</span
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="para-section">
+      <p><i class="fa-solid fa-language"></i> English</p>
+      <textarea
+        placeholder="Success is not the end, and failure is not the downfall. What truly matters is the resilience to rise, learn, and keep moving forward despite the challenges."
+      ></textarea>
+
+      <span><i class="fa-solid fa-rotate-right"></i></span>
+    </div>
+    <div class="start-button"><button>Start Test</button></div>
+    <div class="footer">
+      <i style="font-size: 35px" class="fa-solid fa-rocket"></i>
+      <div class="progress-section">
+        <h4>Track your progress and level up every day! 🚀</h4>
+        <progress value="50" max="100"></progress>
+      </div>
+      <div class="switch-btn">
+        <button class="active">Sign up</button>
+        <button>Log in</button>
+      </div>
+    </div>
+    <div id="auth-modal" class="modal">
+      <div class="modal-content">
+        <div>
+          <span class="close">&times;</span>
+          <h2 id="modal-title">Sign Up</h2>
+        </div>
+        <form id="auth-form">
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <button type="button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
