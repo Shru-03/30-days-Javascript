@@ -44,7 +44,7 @@ This repository documents my daily progress, key concepts, and mini projects ove
 
 1. Clone the repo  
   
-   git clone https://github.com/Shru-03/30-days-js.git
+   git clone https://github.com/Shru-03/30-days-Javascript.git
 
 2. Navigate to folder 
    cd 30-days-Javascript
