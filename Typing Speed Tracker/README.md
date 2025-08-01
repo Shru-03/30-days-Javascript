@@ -1,6 +1,6 @@
 # ⌨️ Key-Speed — Typing Speed Tracker
 
-A lightweight typing speed tracker built with vanilla JavaScript.  
+A lightweight typing speed tracker built with JavaScript.  
 This project helps track your typing speed (WPM/CPM), supports timed challenges, and lets users choose quotes with or without numbers and punctuation.
 
 ---
