@@ -40,7 +40,7 @@
 //   return newArr;
 // }
 
-// console.log(Rotate([2, 4, 8, 1, 6, 7], 2));
+// console.log(Rotate([2, 4, 8, 1, 6, 7],2));
 
 // -------------------------------------------------------
 
@@ -49,14 +49,14 @@
 // function SecondLargest(arr) {
 //   var max = arr[0];
 //   var max2 = arr[0];
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > max) {
-//       max = arr[i];
+//   for (let num of arr) {
+//     if (num > max) {
+//       max = num;
 //     }
 //   }
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] < max && arr[i] > max2) {
-//       max2 = arr[i];
+//   for (let num of arr) {
+//     if (num < max && num > max2) {
+//       max2 = num;
 //     }
 //   }
 //   return { max2 };
@@ -64,15 +64,41 @@
 
 // console.log(SecondLargest([2, 4, 8, 1, 6, 7]));
 
+// Note: if array have duplicate values it will cause issue so to avoid duplicates using only 1 loop :
+
+// function SecondLargest(arr) {
+//   let max = -Infinity;
+//   let secondMax = -Infinity;
+
+//   for (let num of arr) {
+//     if (num > max) {
+//       secondMax = max;
+//       max = num;
+//     } else if (num < max && num > secondMax) {
+//       secondMax = num;
+//     }
+//   }
+
+//   // If secondMax was never updated, it means there's no second largest
+//   if (secondMax === -Infinity) {
+//     return "No second largest value (all elements may be the same)";
+//   }
+
+//   return secondMax;
+// }
+
+// console.log(SecondLargest([2, 4, 8, 1, 6, 7])); // 7
+// console.log(SecondLargest([5, 5, 5])); // No second largest value
+// console.log(SecondLargest([10])); // No second largest value
+
 // -------------------------------------------------------
 
 //Q5:- Find all pairs in an array whose sum is equals a target
 
-// function func(arr, target) {
+// function findPairsSet(arr, target) {
 //   const seen = new Set();
 //   const result = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     const num = arr[i];
+//   for (let num of arr) {
 //     const complement = target - num;
 //     if (seen.has(complement)) {
 //       result.push([num, complement]);
@@ -84,8 +110,24 @@
 //   return result;
 // }
 
-// console.log(func([2, 4, 8, 6, 7], 10));
+// console.log(findPairsSet([2, 4, 8, 6, 7], 10));
 
+//             OR
+
+// function findPairsBruteForce(arr, target) {
+//   let result = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] + arr[j] === target) {
+//         result.push([arr[i], arr[j]]);
+//       }
+//     }
+//   }
+
+//   return result;
+// }
+// console.log(findPairsBruteForce([2, 4, 8, 6, 7], 10));
 // -------------------------------------------------------
 
 //Q6:- Merge two sorted array into a single sorted array
@@ -113,10 +155,13 @@
 // METHOD:2
 // function sortTwoArrays(arr1, arr2) {
 //   const merged = arr1.concat(arr2);
-//   return merged.sort((a, b) => a - b);
+//   merged.sort((a, b) => a - b);
+//   const sortedArr1 = merged.slice(0, arr1.length);
+//   const sortedArr2 = merged.slice(arr2.length);
+//   return [sortedArr1, sortedArr2];
 // }
 
-// console.log(func([2, 8, 7, 4, 6], [10, 3, 5, 9, 1]));
+// console.log(sortTwoArrays([2, 8, 7, 4, 6], [10, 3, 5, 9, 1]));
 
 // -------------------------------------------------------
 
@@ -197,10 +242,10 @@
 
 // Q10:-Find the Missing Number in an Array.
 
-function missingNumber(arr) {
-  var n = arr.length + 1;
-  var expectedSum = (n * (n + 1)) / 2;
-  const actualSum = arr.reduce((sum, num) => sum + num, 0);
-  return expectedSum - actualSum;
-}
-console.log(missingNumber([1, 2, 4, 5]));
+// function missingNumber(arr) {
+//   var n = arr.length + 1;
+//   var expectedSum = (n * (n + 1)) / 2;
+//   const actualSum = arr.reduce((sum, num) => sum + num, 0);
+//   return expectedSum - actualSum;
+// }
+// console.log(missingNumber([1, 2, 4, 5]));
