@@ -40,6 +40,29 @@ This repository documents my daily progress, key concepts, and mini projects ove
 
 ---
 
+# KeySpeed - Typing Speed Tracker (In Progress)
+
+## ✅ Features Implemented
+
+- ⏱️ Typing speed tracking (WPM & CPM)
+- 📜 Random quote generation
+- 🔢 Option to include numbers & punctuation
+- ⌛ Selectable timings for challenges
+
+---
+
+## 🚧 Features in Progress
+
+The following features are still under development.  
+If you’re looking for a hands-on mini project to practice your **JavaScript and logic-building skills**, feel free to contribute:
+
+- 🧾 **Signup/Login functionality**
+- 💾 **Store last 3 results in LocalStorage**
+- 🧠 **Display previous attempt stats for feedback**
+
+If you decide to build or improve any of these, please create a PR or raise an issue — I’d love to check it out and collaborate! 
+
+
 ## 🚀 Getting Started
 
 1. Clone the repo  
