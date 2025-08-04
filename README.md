@@ -66,7 +66,6 @@ If you decide to build or improve any of these, please create a PR or raise an i
 ## 🚀 Getting Started
 
 1. Clone the repo  
-  
    git clone https://github.com/Shru-03/30-days-Javascript.git
 
 2. Navigate to folder 
